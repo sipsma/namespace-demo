@@ -1,0 +1,14 @@
+engineVersion = "v1.0.0-beta.12"
+
+[modules.go-sdk]
+source = "dagger.io/sdk/go"
+
+[sdks.go]
+module = "go-sdk"
+
+[modules.demo]
+source = ".dagger/modules/demo"
+
+[sdks.go.scopes.".dagger/modules/demo"]
+is-module = true
+name = "demo"
